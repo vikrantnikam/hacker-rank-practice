@@ -19,7 +19,7 @@ public class ArraySum {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+      //  BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         int arCount = Integer.parseInt(scanner.nextLine().trim());
 
@@ -33,10 +33,10 @@ public class ArraySum {
         }
 
         int result = simpleArraySum(ar);
+        System.out.println(result);
+        //bufferedWriter.write(String.valueOf(result));
+        //bufferedWriter.newLine();
 
-        bufferedWriter.write(String.valueOf(result));
-        bufferedWriter.newLine();
-
-        bufferedWriter.close();
+        //bufferedWriter.close();
     }
 }
