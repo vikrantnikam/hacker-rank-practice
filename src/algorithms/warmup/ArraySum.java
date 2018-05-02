@@ -1,10 +1,7 @@
 package algorithms.warmup;
 
-import java.io.*;
-import java.math.*;
-import java.text.*;
-import java.util.*;
-import java.util.regex.*;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class ArraySum {
 

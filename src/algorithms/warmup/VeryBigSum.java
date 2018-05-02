@@ -1,7 +1,5 @@
 package algorithms.warmup;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -24,7 +22,7 @@ public class VeryBigSum {
 	private static final Scanner scan = new Scanner(System.in);
 
 	public static void main(String[] args) throws IOException {
-		
+
 		int n = Integer.parseInt(scan.nextLine().trim());
 
 		long[] ar = new long[n];
@@ -39,7 +37,7 @@ public class VeryBigSum {
 		long result = aVeryBigSum(n, ar);
 
 		System.out.println(result);
-		
+
 		scan.close();
 	}
 }
