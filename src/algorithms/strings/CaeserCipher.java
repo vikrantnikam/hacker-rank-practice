@@ -5,10 +5,12 @@ import java.util.Scanner;
 public class CaeserCipher {
 
 	static String caesarCipher(String s, int k) {
+		// Complete this function
+		char[] alphabets = new char[100];
 		boolean constraint1 = s.contains(" ");
 		boolean constraint2 = (0 <= k && k <= 100) ? true : false;
 		if (!constraint1 && constraint2 && s.matches("\\A\\p{ASCII}*\\z")) {
-			char[] alphabets = new char[100];
+
 			char[] inputCharArray = s.toCharArray();
 			int i = 0;
 			for (char alpha : inputCharArray) {
@@ -34,16 +36,15 @@ public class CaeserCipher {
 				}
 				i++;
 			}
-			String str = String.valueOf(alphabets);
-			System.out.println(str);
+
 		}
 
-		return s;
+		return String.valueOf(alphabets).trim();
 	}
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		//int n = in.nextInt();
+		int n = in.nextInt();
 		String s = in.next();
 		int k = in.nextInt();
 		String result = caesarCipher(s, k);
