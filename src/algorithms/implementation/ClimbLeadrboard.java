@@ -42,7 +42,7 @@ public class ClimbLeadrboard {
 	private static final Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) throws IOException {
-		BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+		//BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
 		int scoresCount = scanner.nextInt();
 		scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
@@ -63,7 +63,7 @@ public class ClimbLeadrboard {
 		int[] alice = new int[aliceCount];
 
 		String[] aliceItems = scanner.nextLine().split(" ");
-		scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+		//scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
 		for (int i = 0; i < aliceCount; i++) {
 			int aliceItem = Integer.parseInt(aliceItems[i]);
@@ -73,16 +73,16 @@ public class ClimbLeadrboard {
 		int[] result = climbingLeaderboard(scores, alice);
 
 		for (int i = 0; i < result.length; i++) {
-			bufferedWriter.write(String.valueOf(result[i]));
+			System.out.println(String.valueOf(result[i]));
 
 			if (i != result.length - 1) {
-				bufferedWriter.write("\n");
+				System.out.println("\n");
 			}
 		}
 
-		bufferedWriter.newLine();
+		//bufferedWriter.newLine();
 
-		bufferedWriter.close();
+		//bufferedWriter.close();
 
 		scanner.close();
 	}
